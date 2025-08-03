@@ -343,3 +343,122 @@ body {
         font-size: 0.9rem;
     }
 }
+/* Add this at the end of your style.css file */
+
+/* Mobile Optimization - 2 Movies per Row */
+@media (max-width: 768px) {
+  /* Main Content Adjustments */
+  .main-content {
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .main-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .main-desc {
+    font-size: 1rem;
+  }
+  
+  /* Email Form Adjustments */
+  .email-form {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .email-form input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 3px;
+    padding: 14px 16px;
+  }
+  
+  .email-form button {
+    width: 50%;
+    border-radius: 3px;
+    padding: 14px 16px;
+  }
+  
+  /* Movie Grid Layout */
+  .movie-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow-x: visible;
+    padding: 10px 5px;
+  }
+  
+  .movie-thumbnail {
+    width: 100%;
+    margin-right: 0;
+    transition: none;
+  }
+  
+  .movie-thumbnail:hover {
+    transform: none;
+  }
+  
+  /* Modal Adjustments */
+  .modal-content {
+    width: 90%;
+    padding: 25px 15px;
+  }
+  
+  /* Navigation Adjustments */
+  .navbar {
+    padding: 15px 10px;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    margin-left: 5px;
+  }
+  
+  .nav-actions {
+    gap: 10px;
+  }
+  
+  .lang-select {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .sign-in-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices (below 400px) */
+@media (max-width: 400px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .main-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .email-form button {
+    width: 60%;
+  }
+  
+  .movie-row {
+    gap: 8px;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+  }
+}
