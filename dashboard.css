@@ -741,3 +741,90 @@ body, html {
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
+/* Add this media query at the end of your dashboard.css file */
+@media (max-width: 576px) {
+  /* Movie Cards Grid Layout for Mobile */
+  .movie-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow-x: visible;
+    padding-bottom: 10px;
+  }
+  
+  .movie-card {
+    width: 100% !important;
+    margin-right: 0;
+  }
+  
+  .movie-card img {
+    height: auto;
+    aspect-ratio: 2/3;
+  }
+  
+  /* Adjust featured section for better mobile viewing */
+  .featured {
+    min-height: 60vh;
+    padding: 70px 15px 25px;
+    margin: 0 10px 15px;
+    background: linear-gradient(180deg, rgba(20,20,20,0.2) 0%, var(--netflix-dark) 90%), 
+                url('https://wallpapercave.com/wp/wp4056410.jpg') no-repeat center center/cover;
+  }
+  
+  .featured-info h1 {
+    font-size: 1.8rem;
+  }
+  
+  .featured-meta {
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+  
+  /* Adjust search results for mobile */
+  .search-results {
+    width: 280px;
+    left: -90px;
+  }
+  
+  /* Make sure modals fit on small screens */
+  .confirm-content {
+    width: 95%;
+    padding: 20px 15px;
+  }
+  
+  .confirm-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .confirm-buttons button {
+    width: 100%;
+  }
+}
+
+/* Additional small mobile adjustments */
+@media (max-width: 400px) {
+  .movie-section {
+    margin: 25px 10px;
+  }
+  
+  .movie-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .featured-info h1 {
+    font-size: 1.6rem;
+  }
+  
+  .featured-info p {
+    font-size: 0.9rem;
+  }
+  
+  .dashboard-navbar {
+    padding: 15px;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+  }
+}
