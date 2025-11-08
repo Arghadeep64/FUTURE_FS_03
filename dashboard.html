@@ -2,14 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Movie Demo (Not affiliated with Netflix)</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      /* minimal responsive fixes — move to dashboard.css if preferred */
+      body{margin:0; font-family:Arial, Helvetica, sans-serif}
+      .dashboard-navbar{display:flex;align-items:center;justify-content:space-between;padding:0.75rem;}
+      .dashboard-nav{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+      .search-container{display:flex;align-items:center;gap:.5rem}
+      @media (max-width:800px){
+        .dashboard-nav{display:none} /* collapse nav on small screens */
+        .search-input{max-width:160px}
+        .movie-row{display:flex;overflow-x:auto;gap:.5rem}
+        .movie-card{min-width:140px}
+      }
+      .demo-disclaimer{background:#f8d7da;color:#721c24;padding:.5rem 1rem;text-align:center;font-size:.95rem}
+    </style>
 </head>
 <body>
+    <div class="demo-disclaimer" role="note">
+        Demo site — Not affiliated with or endorsed by Netflix. For learning/demo purposes only.
+    </div>
     <div class="dashboard-bg">
         <nav class="dashboard-navbar">
-            <div class="logo">NET</div>
+            <div class="logo">MOVIE DEMO</div>
             <ul class="dashboard-nav">
                 <li><a href="#featured">Home</a></li>
                 <li><a href="#tv-shows">TV Shows</a></li>
@@ -140,12 +159,7 @@
             </div>
         </section>
     </div>
-    <div style="background: #ffdddd; padding: 10px; text-align: center;">
-  ⚠️ This is a student project for educational purposes only. Not affiliated with Netflix.
-</div>
     
     <script src="app.js"></script>
 </body>
-
 </html>
-
