@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Movie Demo (Not affiliated with Netflix)</title>
+    <title>Movie Demo (Not affiliated with any streaming service)</title>
+    <meta name="description" content="Movie Demo — a learning project. Not affiliated with Netflix or any streaming service.">
+    <link rel="icon" href="assets/favicon.ico"> 
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-      /* minimal responsive fixes — move to dashboard.css if preferred */
+      /* changed accent color away from Netflix red and stronger visible disclaimer */
+      :root{--accent:#0b6b8f;--accent-contrast:#fff}
       body{margin:0; font-family:Arial, Helvetica, sans-serif}
-      .dashboard-navbar{display:flex;align-items:center;justify-content:space-between;padding:0.75rem;}
+      .dashboard-navbar{display:flex;align-items:center;justify-content:space-between;padding:0.75rem;background:var(--accent);color:var(--accent-contrast)}
       .dashboard-nav{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
       .search-container{display:flex;align-items:center;gap:.5rem}
+      .demo-disclaimer{background:#fff3cd;color:#856404;padding:.75rem 1rem;text-align:center;font-size:1rem;border-bottom:4px solid #ffe8a1}
       @media (max-width:800px){
-        .dashboard-nav{display:none} /* collapse nav on small screens */
+        .dashboard-nav{display:none}
         .search-input{max-width:160px}
         .movie-row{display:flex;overflow-x:auto;gap:.5rem}
         .movie-card{min-width:140px}
       }
-      .demo-disclaimer{background:#f8d7da;color:#721c24;padding:.5rem 1rem;text-align:center;font-size:.95rem}
     </style>
 </head>
 <body>
-    <div class="demo-disclaimer" role="note">
-        Demo site — Not affiliated with or endorsed by Netflix. For learning/demo purposes only.
+    <!-- make disclaimer clearly visible and unavoidable -->
+    <div class="demo-disclaimer" role="note" aria-live="polite">
+        IMPORTANT: This is a learning/demo site only — not affiliated with or endorsed by any streaming service. Repo/site name must be changed from "netflix-clone" before public hosting.
     </div>
     <div class="dashboard-bg">
         <nav class="dashboard-navbar">
