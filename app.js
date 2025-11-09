@@ -456,8 +456,4 @@ document.addEventListener('DOMContentLoaded', function() {
       const accountEls = document.querySelectorAll('.dashboard-user, .user-dropdown, #sign-out');
       accountEls.forEach(el => el.remove());
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('Movie Demo loaded');
-    });
 });
