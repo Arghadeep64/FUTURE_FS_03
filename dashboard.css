@@ -7,6 +7,9 @@
   --netflix-light: #fff;
   --netflix-danger: #ff3a3a;
   --header-height: 80px;
+  --bg-color: #141414;
+  --text-color: #ffffff;
+  --accent-color: #e50914;
 }
 
 /* Base Styles */
@@ -29,6 +32,14 @@ body, html {
   color: var(--netflix-light);
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+.demo-disclaimer {
+    background-color: #ffcccb;
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* Layout */
