@@ -437,4 +437,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load movies if container exists
     loadMovies();
+
+    // Minimal client script for the demo: no auth, just accessibility helpers.
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // basic keyboard focus outlines for cards
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            card.querySelector('img')?.scrollIntoView({behavior:'smooth',block:'center'});
+          }
+        });
+      });
+
+      // remove any leftover account-related UI if present
+      const accountEls = document.querySelectorAll('.dashboard-user, .user-dropdown, #sign-out');
+      accountEls.forEach(el => el.remove());
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('Movie Demo loaded');
+    });
 });
