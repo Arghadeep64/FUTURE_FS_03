@@ -1,6 +1,0 @@
-# Force HTTPS redirects
-http://*    https://%{host}%{path}    301
-
-# SPA fallback - only for routes that don't match existing files
-/*    /index.html   200
-
